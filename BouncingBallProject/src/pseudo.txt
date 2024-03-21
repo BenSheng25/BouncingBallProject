@@ -1,0 +1,32 @@
+
+
+x,y,p,q,ballBounce
+
+current point
+
+arrayList = new ArrayList()
+
+initSlope = q/(x-p)
+firstEq -> y = initSlope(x)+b
+currentPoint = p,0
+b = solve(0 = q/(x-p)p+b)
+
+newSlope = -initSlope
+ballBounce++
+
+secondEq -> y = newSlope(x)+b
+currentPoint = x,q
+b = solve(q = newSlope(x)+b)
+
+p1 = solve(secondEq, h1)
+p1 = solve(secondEq, h2)
+p3 = solve(secondEq, v1)
+p4 = solve(secondEq, v2)
+
+pfinal = check if each falls in boundary of rectangular box
+
+check if pfinal is in corners
+check if pfinal is arrayList.get(0)
+
+
+
