@@ -38,7 +38,7 @@ public class Main {
             double[] p2 = horizontalSolve(y,slope,currIntercept);
             double[] p3 = verticalSolve(0,slope,currIntercept);
             double[] p4 = verticalSolve(x,slope,currIntercept);
-            if(p1[0]<=x&&p1[0]>=0&&!p1.equals(lastPoint)){
+            if(p1[0]<=x&&p1[0]>=0){
                 nextPoint = p1;
             }else if(p2[0]<=x&&p2[0]>=0){
                 nextPoint = p2;
@@ -68,11 +68,11 @@ public class Main {
 
     public static boolean isInCorner(double[] point, double x, double y){
         if(point[0]==0||point[0]==x){
-            if(point[1]<=y&&point[1]>=y-5||point[1]<=5&&point[1]>=0){
+            if(point[1]<y&&point[1]>y-5||point[1]<5&&point[1]>0){
                 return true;
             }
         }else if(point[1]==0||point[1]==y){
-            if(point[0]<=x&&point[0]>=x-5||point[0]<=5&&point[0]>=0){
+            if(point[0]<x&&point[0]>x-5||point[0]<5&&point[0]>0){
                 return true;
             }
         }else{

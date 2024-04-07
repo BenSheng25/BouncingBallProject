@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Revised {
+public class DEMO {
 
     /**
      * @author Jackson Ding, Benjamin Sheng
@@ -25,11 +25,6 @@ public class Revised {
         double y = input.nextInt();
         double p = input.nextInt();
         double q = input.nextInt();
-        //DBUG Purposes
-//        System.out.println(x);
-//        System.out.println(y);
-//        System.out.println(p);
-//        System.out.println(q);
 
         int ballBounceCount = 0; //make variable for the amount of time the ball bounces
         double[] initPoint = { p, 0 }; //sets the initial point for the ball's bounce to check for infinite loop later
@@ -84,7 +79,6 @@ public class Revised {
         System.out.println(0); //print 0 if everything else fails error managing
     }
 
-    //another corner check method that works
 //    public static boolean isInCorner(double[] point, double x, double y) {
 //        double xPoint = roundToTwoDecimals(point[0]);
 //        double yPoint = roundToTwoDecimals(point[1]);
@@ -100,6 +94,21 @@ public class Revised {
 //        return false;
 //    }
 
+//    public static boolean isInCorner(double[] point, double x, double y){
+//        if(point[0]==0||point[0]==x){
+//            if((point[1]<y&&point[1]>y-5)||(point[1]<5&&point[1]>0)){
+//                return true;
+//            }
+//        }else if(point[1]==0||point[1]==y){
+//            if((point[0]<x&&point[0]>x-5)||(point[0]<5&&point[0]>0)){
+//                return true;
+//            }
+//        }else{
+//            return false;
+//        }
+//        return false;
+//
+
     /**
      *
      * @param point the coordinate of intersection
@@ -111,12 +120,10 @@ public class Revised {
      */
     public static boolean isInCorner(double[] point, double x, double y) {
         //convert the coordinate to two decimals to get rid of double data type errors
-//        System.out.println(point[0]);
-//        System.out.println(point[1]);
+        System.out.println(point[0]);
+        System.out.println(point[0]);
         double xPoint = roundToTwoDecimals(point[0]);
         double yPoint = roundToTwoDecimals(point[1]);
-//        System.out.println(xPoint);
-//        System.out.println(yPoint);
 
         //check of the point is in each corner the actual corners are included but the 5 units away are excluded because the problem specify that the balls bounce at the corners
         if (xPoint == 0 || xPoint == x) {
