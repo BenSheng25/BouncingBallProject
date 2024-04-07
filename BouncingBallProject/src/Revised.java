@@ -111,12 +111,8 @@ public class Revised {
      */
     public static boolean isInCorner(double[] point, double x, double y) {
         //convert the coordinate to two decimals to get rid of double data type errors
-//        System.out.println(point[0]);
-//        System.out.println(point[1]);
         double xPoint = roundToTwoDecimals(point[0]);
         double yPoint = roundToTwoDecimals(point[1]);
-//        System.out.println(xPoint);
-//        System.out.println(yPoint);
 
         //check of the point is in each corner the actual corners are included but the 5 units away are excluded because the problem specify that the balls bounce at the corners
         if (xPoint == 0 || xPoint == x) {
